@@ -1,7 +1,7 @@
 ## Enhanced Defect Segmentation in X-ray Images of Copper Pipe Welds via Multi-scale Representation and Kolmogorov-Arnold Networks
 
 <p align="middle">
-    <img src="figure/Figure1.jpg">
+    <img src="images/Fig.1.png">
 </p>
 
 ## Requirements
@@ -37,7 +37,7 @@ You only need to configure the relevant content in the relevant script file to r
 
 ## Visualization
 <p align="middle">
-    <img src="figure/Figure4.jpg">
+    <img src="images/result.png">
 </p>
 
 ## Usage
