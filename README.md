@@ -9,7 +9,7 @@ This is the implementation of our paper "Enhanced Defect Segmentation in X-ray I
 
 ### 1. Datesets
 
-Please go to ["./datasets/README.md"](datasets/README.md) for details, or use the [preprocessed data](https://drive.google.com/drive/folders/1ACJEoTp-uqfFJ73qS3eUObQh52nGuzCd?usp=sharing) for research purposes.
+Use the [preprocessed data](https://drive.google.com/file/d/1fL2U-ZU-zKrNDb0CGZBpWJcIRlzwFQpK/view?usp=sharing) for research purposes.
 
 ### 2. Environment
 
