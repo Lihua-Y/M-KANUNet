@@ -1,29 +1,56 @@
-# TransUNet
-This repo holds code for [TransUNet: Transformers Make Strong Encoders for Medical Image Segmentation](https://arxiv.org/pdf/2102.04306.pdf)
+## Enhanced Defect Segmentation in X-ray Images of Copper Pipe Welds via Multi-scale Representation and Kolmogorov-Arnold Networks
 
-## 📰 News
+<p align="middle">
+    <img src="figure/Figure1.jpg">
+</p>
 
-- [10/15/2023] 🔥 3D version of TransUNet is out! Our 3D TransUNet surpasses nn-UNet with 88.11% Dice score on the BTCV dataset and outperforms the top-1 solution in the BraTs 2021 challenge. Please take a look at the [code](https://github.com/Beckschen/3D-TransUNet/tree/main) and [paper](https://arxiv.org/abs/2310.07781).
+## Requirements
+
+- Python 3.7
+- PyTorch 1.5.1
+- cuda 10.1
+- tensorboard 1.14
+
+## Datasets
+
+- PASCAL-5<sup>i</sup>:  [VOC2012](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/) + [SBD](http://home.bharathh.info/pubs/codes/SBD/download.html)
+
+- COCO-20<sup>i</sup>:  [COCO2014](https://cocodataset.org/#download)
+
+  Please see [OSLSM](https://arxiv.org/abs/1709.03410) and [FWB](https://openaccess.thecvf.com/content_ICCV_2019/html/Nguyen_Feature_Weighting_and_Boosting_for_Few-Shot_Segmentation_ICCV_2019_paper.html) for more details on datasets. 
+
+## Test and Train
+You only need to configure the relevant content in the relevant script file to run
+
+
+### Training
+
+> ```bash
+> ./train.sh  
+> ```
+
+### Testing
+
+> ```bash
+> ./test.sh
+> ```
+
+## Visualization
+<p align="middle">
+    <img src="figure/Figure4.jpg">
+</p>
 
 ## Usage
 
-### 1. Download Google pre-trained ViT models
-* [Get models in this link](https://console.cloud.google.com/storage/vit_models/): R50-ViT-B_16, ViT-B_16, ViT-L_16...
-```bash
-wget https://storage.googleapis.com/vit_models/imagenet21k/{MODEL_NAME}.npz &&
-mkdir ../model/vit_checkpoint/imagenet21k &&
-mv {MODEL_NAME}.npz ../model/vit_checkpoint/imagenet21k/{MODEL_NAME}.npz
-```
-
-### 2. Prepare data
+### 1. Prepare data
 
 Please go to ["./datasets/README.md"](datasets/README.md) for details, or use the [preprocessed data](https://drive.google.com/drive/folders/1ACJEoTp-uqfFJ73qS3eUObQh52nGuzCd?usp=sharing) for research purposes.
 
-### 3. Environment
+### 2. Environment
 
 Please prepare an environment with python=3.7, and then use the command "pip install -r requirements.txt" for the dependencies.
 
-### 4. Train/Test
+### 3. Train/Test
 
 - Run the train script on synapse dataset. The batch size can be reduced to 12 or 6 to save memory (please also decrease the base_lr linearly), and both can reach similar performance.
 
@@ -41,14 +68,3 @@ python test.py --dataset Synapse --vit_name R50-ViT-B_16
 * [Google ViT](https://github.com/google-research/vision_transformer)
 * [ViT-pytorch](https://github.com/jeonsworld/ViT-pytorch)
 * [segmentation_models.pytorch](https://github.com/qubvel/segmentation_models.pytorch)
-
-## Citations
-
-```bibtex
-@article{chen2021transunet,
-  title={TransUNet: Transformers Make Strong Encoders for Medical Image Segmentation},
-  author={Chen, Jieneng and Lu, Yongyi and Yu, Qihang and Luo, Xiangde and Adeli, Ehsan and Wang, Yan and Lu, Le and Yuille, Alan L., and Zhou, Yuyin},
-  journal={arXiv preprint arXiv:2102.04306},
-  year={2021}
-}
-```
