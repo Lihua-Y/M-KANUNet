@@ -1,43 +1,8 @@
 ## Enhanced Defect Segmentation in X-ray Images of Copper Pipe Welds via Multi-scale Representation and Kolmogorov-Arnold Networks
+This is the implementation of our paper "Enhanced Defect Segmentation in X-ray Images of Copper Pipe Welds via Multi-scale Representation and Kolmogorov-Arnold Networks"
 
 <p align="middle">
-    <img src="images/Fig.1.png">
-</p>
-
-## Requirements
-
-- Python 3.7
-- PyTorch 1.5.1
-- cuda 10.1
-- tensorboard 1.14
-
-## Datasets
-
-- PASCAL-5<sup>i</sup>:  [VOC2012](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/) + [SBD](http://home.bharathh.info/pubs/codes/SBD/download.html)
-
-- COCO-20<sup>i</sup>:  [COCO2014](https://cocodataset.org/#download)
-
-  Please see [OSLSM](https://arxiv.org/abs/1709.03410) and [FWB](https://openaccess.thecvf.com/content_ICCV_2019/html/Nguyen_Feature_Weighting_and_Boosting_for_Few-Shot_Segmentation_ICCV_2019_paper.html) for more details on datasets. 
-
-## Test and Train
-You only need to configure the relevant content in the relevant script file to run
-
-
-### Training
-
-> ```bash
-> ./train.sh  
-> ```
-
-### Testing
-
-> ```bash
-> ./test.sh
-> ```
-
-## Visualization
-<p align="middle">
-    <img src="images/result.png">
+    <img src="figure/Figure1.jpg">
 </p>
 
 ## Usage
@@ -48,7 +13,7 @@ Please go to ["./datasets/README.md"](datasets/README.md) for details, or use th
 
 ### 2. Environment
 
-Please prepare an environment with python=3.7, and then use the command "pip install -r requirements.txt" for the dependencies.
+Please prepare an environment with python=3.9, and then use the command "pip install -r requirements.txt" for the dependencies.
 
 ### 3. Train/Test
 
@@ -63,8 +28,13 @@ CUDA_VISIBLE_DEVICES=0 python train.py --dataset Synapse --vit_name R50-ViT-B_16
 ```bash
 python test.py --dataset Synapse --vit_name R50-ViT-B_16
 ```
+## Visualization
+<p align="middle">
+    <img src="figure/Figure4.jpg">
+</p>
+. (a) Original X-ray image. (b) Ground-truth. (c): TransUNet. (d): UNet. (e): PSPNet. (f): SegNet. (g) Ours.
 
 ## Reference
-* [Google ViT](https://github.com/google-research/vision_transformer)
-* [ViT-pytorch](https://github.com/jeonsworld/ViT-pytorch)
+* [TransUNet](https://github.com/Beckschen/TransUNet)
+* [Kolmogorov-arnold networks](https://github.com/KindXiaoming/pykan)
 * [segmentation_models.pytorch](https://github.com/qubvel/segmentation_models.pytorch)
