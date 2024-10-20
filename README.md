@@ -2,7 +2,7 @@
 This is the implementation of our paper "Enhanced Defect Segmentation in X-ray Images of Copper Pipe Welds via Multi-scale Representation and Kolmogorov-Arnold Networks"
 
 <p align="middle">
-    <img src="figure/Figure1.jpg">
+    <img src="images/Fig.1.png">
 </p>
 
 ## Usage
@@ -30,7 +30,7 @@ python test.py --dataset Synapse --vit_name R50-ViT-B_16
 ```
 ## Visualization
 <p align="middle">
-    <img src="figure/Figure4.jpg">
+    <img src="images/result.png">
 </p>
 . (a) Original X-ray image. (b) Ground-truth. (c): TransUNet. (d): UNet. (e): PSPNet. (f): SegNet. (g) Ours.
 
