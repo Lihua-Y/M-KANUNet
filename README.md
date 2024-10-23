@@ -28,12 +28,6 @@ CUDA_VISIBLE_DEVICES=0 python train.py
 ```bash
 python test.py
 ```
-## Visualization
-<p align="middle">
-    <img src="images/result.png">
-</p>
-. (a) Original X-ray image. (b) Ground-truth. (c): TransUNet. (d): UNet. (e): PSPNet. (f): SegNet. (g) Ours.
-
 ## Reference
 * [TransUNet](https://github.com/Beckschen/TransUNet)
 * [Kolmogorov-arnold networks](https://github.com/KindXiaoming/pykan)
